@@ -1,9 +1,9 @@
 f = int(input())
 k = int(input())
-if f < 5 and k > 2:
-    r = f + k - 1
-if k < 2:
-    r = k**2
-if k == 2:
-    r = 1
+if f < k:
+    r = f + k ** 2 - 1
+if k < 2 and f == 3:
+    r = k ** 2
+else:
+    r = f - 1
 print(r)
