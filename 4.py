@@ -1,8 +1,5 @@
-a = int(input())
-b = int(input())
-if a < b:
-	for i in range(a, b + 1, 1):
-		print(i)
+x = int(input())
+if x % 100 == 0:
+	print("Вековым является")
 else:
-	for i in range(a, b - 1, -1):
-		print(i)
+	print("Вековым не является")
