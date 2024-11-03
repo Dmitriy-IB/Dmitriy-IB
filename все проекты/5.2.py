@@ -1,5 +1,5 @@
 k = 0
-x = 'l:akdkkfj:dldkkvf:fdd'
-x.replace(':', '%')
+x = input()
 k += x.count(':')
-print(k)
+x = x.replace(':', '%')
+print(k, x)
