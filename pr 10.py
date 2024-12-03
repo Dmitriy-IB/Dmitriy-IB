@@ -1,3 +1,6 @@
+# Для заданий из практической работы №8 для своего варианта.
+# Организовать ввод данных (матриц) из файла (имя: ФИО_группа_vvod.txt)
+# И вывод результатов в файл (имя: ФИО_группа_vivod.txt).
 n = int(input()) #кол-во столбцов
 s = []
 flag = 0
@@ -23,19 +26,14 @@ if flag == 1:
 else:
     print('Квадрат не является магическим')
 
-file1 = open('Джамалов Дмитрий Максимович_УБ-42_vvod .txt', 'w')
-a = file1.write(str(n))
-a = file1.write(str(s))
-file1.close()
+with open('Джамалов Дмитрий Максимович_УБ-42_vvod .txt', 'w') as file1:
+    a = file1.write(str(n))
+    a = file1.write(str(s))
 
-file1 = open('Джамалов Дмитрий Максимович_УБ-42_vvod .txt', 'r')
-b = file1.read()
-file1.close()
+with (open('Джамалов Дмитрий Максимович_УБ-42_vvod .txt', 'r') as file1,
+        open('Джамалов Дмитрий Максимович_УБ-42_vivod .txt', 'w') as file2):
+    b = file1.read()
+    c = file2.write(str(b))
 
-file2 = open('Джамалов Дмитрий Максимович_УБ-42_vivod .txt', 'w')
-c = file2.write(str(b))
-file2.close()
-
-file2 = open('Джамалов Дмитрий Максимович_УБ-42_vivod .txt', 'r')
-print(*file2)
-file2.close()
+with open('Джамалов Дмитрий Максимович_УБ-42_vivod .txt', 'r') as file2:
+    print(file2.read())
