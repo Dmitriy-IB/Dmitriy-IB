@@ -30,15 +30,15 @@ def calculate():
 def vibor_chec():
     vibor = [] # пустой список
     if perv.get() == 1:
-        vibor.append("Вариант 1")
+        vibor.append('Вариант 1')
     if vtor.get() == 1:
-        vibor.append("Вариант 2")
+        vibor.append('Вариант 2')
     if tret.get() == 1:
-        vibor.append("Вариант 3")
+        vibor.append('Вариант 3')
     if vibor:
-        messagebox.showinfo("Ваш выбор", f'Вы выбрали: {vibor}')
+        messagebox.showinfo('Ваш выбор', f'Вы выбрали: {vibor}')
     else:
-        messagebox.showinfo("Ваш выбор", "Вы ничего не выбрали")
+        messagebox.showinfo('Ваш выбор', 'Вы ничего не выбрали')
 
 def otr_file():
     yourfile = filedialog.askopenfilename() # открытие диалогового окна для выбора файла
@@ -80,18 +80,18 @@ chec = Frame(win)
 chec.config(bg='#3F9C2C')
 win.add(chec, text='Три чекбокса')
 perv = IntVar() # переменная для хранения целочисленных значений в Tkinter
-but_perv = Checkbutton(chec, text="Первый", variable=perv)
+but_perv = Checkbutton(chec, text='Первый', variable=perv)
 but_perv.config(bg='#197622')
 but_perv.pack(anchor=N)
 vtor = IntVar()
-but_vtor = Checkbutton(chec, text="Второй", variable=vtor)
+but_vtor = Checkbutton(chec, text='Второй', variable=vtor)
 but_vtor.config(bg='#197622')
 but_vtor.pack(anchor=W)
 tret = IntVar()
-but_tret = Checkbutton(chec, text="Третий", variable=tret)
+but_tret = Checkbutton(chec, text='Третий', variable=tret)
 but_tret.config(bg='#197622')
 but_tret.pack(anchor=E)
-butt = Button(chec, text="Ваш выбор", command=vibor_chec)
+butt = Button(chec, text='Ваш выбор', command=vibor_chec)
 butt.config(bg='#197622')
 butt.pack(anchor=N)
 
@@ -100,7 +100,7 @@ text.config(bg='#712779')
 win.add(text, text='Работа с текстом')
 text_zone = Text(text, width=40, height=15, wrap=WORD)
 text_zone.pack()
-but_zone = Button(text, text="Загрузить текст из файла", command=otr_file)
+but_zone = Button(text, text='Загрузить текст из файла', command=otr_file)
 but_zone.config(bg='#E991F3')
 but_zone.pack()
 win.pack()
