@@ -40,11 +40,11 @@ def vibor_chec():
     else:
         messagebox.showinfo('Ваш выбор', 'Вы ничего не выбрали')
 
-def otr_file():
-    yourfile = filedialog.askopenfilename() # открытие диалогового окна для выбора файла
-    if yourfile:
+def otkr_file():
+    vashfile = filedialog.askopenfilename() # открытие диалогового окна для выбора файла
+    if vahfile:
         try:
-            with open(yourfile, 'r', encoding='utf-8') as file: # encoder - процедура, помогающая преобразовывать файл в компьютерный язык
+            with open(vashfile, 'r', encoding='utf-8') as file: # encoder - процедура, помогающая преобразовывать файл в компьютерный язык
                 text = file.read()
                 text_zone.delete('1.0', END) # очищает текстовое поле
                 text_zone.insert(END, text) # вставляет в текстовое поле
@@ -100,7 +100,7 @@ text.config(bg='#712779')
 win.add(text, text='Работа с текстом')
 text_zone = Text(text, width=40, height=15, wrap=WORD)
 text_zone.pack()
-but_zone = Button(text, text='Загрузить текст из файла', command=otr_file)
+but_zone = Button(text, text='Загрузить текст из файла', command=otkr_file)
 but_zone.config(bg='#E991F3')
 but_zone.pack()
 win.pack()
