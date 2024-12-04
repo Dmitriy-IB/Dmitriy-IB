@@ -9,7 +9,7 @@ from tkinter import messagebox
 
 def polychit():
     username = entry.get() # вводим имя репрезитория
-    url = f"https://api.github.com/users/{username}" # ссылка для получения информации
+    url = f'https://api.github.com/users/{username}' # ссылка для получения информации
     req = requests.get(url) # запрос информации из ссылки
     with open('dannie.json', 'w') as soxranenie:
         json.dump(req.json(), soxranenie) # записывает файл в json формате
